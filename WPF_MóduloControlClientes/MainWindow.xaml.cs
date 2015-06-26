@@ -10,40 +10,51 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WPF_MóduloControlClientes
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para Window1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Window1 : Window
     {
-        private char maximizeRestore = '1';
-        public MainWindow()
+        public Window1()
         {
             InitializeComponent();
         }
-
-
-
+                //Determines the character used in the maximize/restore button.
+        private char _maximized = '1';
+        
         private void CommandBinding_CanExecute_1(object sender, CanExecuteRoutedEventArgs e)
         {
             e.CanExecute = true;
         }
-
-        private void CommandBinding_Executed_1(object sender, ExecutedRoutedEventArgs e)
+        //Closes the window when the close window button is clicked.
+        private void CommandBinding_CloseWindow(object sender, ExecutedRoutedEventArgs e)
         {
             SystemCommands.CloseWindow(this);
         }
-
-        private void CommandBinding_Executed_2(object sender, ExecutedRoutedEventArgs e)
+        //Minimizes the window when the minimize window button is clicked.
+        private void CommandBinding_MinimizeWindow(object sender, ExecutedRoutedEventArgs e)
         {
-            maximizeAndRestore();
+            SystemCommands.MinimizeWindow(this);
         }
-
-        private void maximizeAndRestore()
+        //Maximizes or Restores the window when the maximize/restore window button is clicked.
+        private void CommandBinding_MaximizeRestoreWindow(object sender, ExecutedRoutedEventArgs e)
+        {
+            maximizeRestore();
+        }
+        //Maximizes/Restores the window when the title bar is double clicked.
+        private void titleBar_mouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
+            {
+                maximizeRestore();
+            }
+        }
+        //Maximizes/Restores the window and changes the button character accordingly.
+        private void maximizeRestore()
         {
             if (WindowState == WindowState.Maximized)
             {
@@ -56,22 +67,11 @@ namespace WPF_MóduloControlClientes
                 btn_maximizeRestore.Content = "2";
             }
         }
-
-        private void CommandBinding_Executed_3(object sender, ExecutedRoutedEventArgs e)
-        {
-            SystemCommands.MinimizeWindow(this);
-        }
+        //Drags the window around the screen when the mouse is clicked and held.
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
                 DragMove();
-        }
-        private void titleBar_mouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
-            {
-                maximizeAndRestore();
-            }
         }
     }
 }
