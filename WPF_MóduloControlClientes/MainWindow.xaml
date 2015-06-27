@@ -60,7 +60,7 @@
         </Grid>
         <Grid Grid.Row="1">
             <TabControl Margin="0,0,0,0" VerticalAlignment="Stretch"  VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
-                <TabItem Header="  CLIENTES  ">
+                <TabItem Header="  CLIENTES  " Margin="0,0,-3.8,-2">
                     <Grid Background="White">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="90"/>
@@ -69,21 +69,32 @@
                         <Grid.ColumnDefinitions>                           
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Row="0">
-                            <StackPanel Orientation="Horizontal">
-                                <Button Content="Nuevo"
+                          <StackPanel Orientation="Horizontal">
+                            <Button
                                 Background="White"
                                 HorizontalAlignment="Left" 
                                 VerticalAlignment="Stretch"
                                 Margin="0,0,0,0" 
-                                Width="90"
-                                ></Button>
-                                <Button Content="Eliminar"
+                                Width="90" BorderBrush="White"
+                                >
+                                    <StackPanel>
+                                        <Image Height="45" Width="45" HorizontalAlignment="Center" Margin="10,0,10,0" Source="newClient.png" Stretch="Fill"/>
+                                        <TextBlock HorizontalAlignment="Center">Nuevo</TextBlock>
+                                    </StackPanel>
+                                </Button>
+                                
+                                <Button 
                                 Background="White"
                                 HorizontalAlignment="Left" 
                                 VerticalAlignment="Stretch"
                                 Margin="0,0,0,0" 
-                                Width="90"
-                                ></Button>
+                                Width="90" BorderBrush="White"
+                                >
+                                    <StackPanel>
+                                        <Image Height="45" Width="45" HorizontalAlignment="Center" Margin="10,0,10,0" Source="deleteClient.png" Stretch="Fill"/>
+                                        <TextBlock HorizontalAlignment="Center">Eliminar</TextBlock>
+                                    </StackPanel>
+                                </Button>
                                 <Button Content="Editar"
                                 Background="White"
                                 HorizontalAlignment="Left" 
@@ -105,6 +116,7 @@
                                 Margin="0,0,0,0" 
                                 Width="90"
                                 ></Button>
+                                
                             </StackPanel>
                         </Grid>
                         
