@@ -6,148 +6,191 @@
         WindowState="Normal"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None" 
-        ResizeMode="CanResizeWithGrip"
+        ResizeMode="NoResize"
         AllowsTransparency="True"
         MouseDown="Window_MouseDown"
         FocusManager.FocusedElement="{Binding ElementName=txt_username}"
         Icon="clients_ico3.ico"
+        MinHeight="350"
+        MinWidth="750"
         >
     <Window.CommandBindings>
         <CommandBinding Command="{x:Static SystemCommands.CloseWindowCommand}" CanExecute="CommandBinding_CanExecute_1" Executed="CommandBinding_CloseWindow" />
         <CommandBinding Command="{x:Static SystemCommands.MaximizeWindowCommand}" CanExecute="CommandBinding_CanExecute_1" Executed="CommandBinding_MaximizeRestoreWindow" />
         <CommandBinding Command="{x:Static SystemCommands.MinimizeWindowCommand}" CanExecute="CommandBinding_CanExecute_1" Executed="CommandBinding_MinimizeWindow" />
     </Window.CommandBindings>
-    <Grid>
+    <Grid Background="DarkRed" Margin="0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="25" />
+            <RowDefinition Height="3" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="3" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="342"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="3" />
         </Grid.ColumnDefinitions>
-        <Grid Grid.Row="0" Grid.Column="0"
-              Name="titleBar_left"
-              MouseDown="titleBar_mouseDown" 
-              Margin="0" 
-              Grid.RowSpan="2" 
-              Background="DarkRed"
-             />
-        <Grid Grid.Row="1" Grid.Column="0"
-              Background="DarkRed"
-             >
-            <Label Content="Clients"
-               HorizontalAlignment="Left" VerticalAlignment="Top"
-               Margin="14,0,0,0"
-               FontSize="40" 
-               Foreground="White"/>
-            <Label Content="notNull.cl" 
-               HorizontalAlignment="Stretch" VerticalAlignment="Top" 
-               FontSize="16"
-               Padding="15,60,0,0"
-               Foreground="WhiteSmoke"/>
+        <Grid Grid.Column="1" Grid.Row="1" Margin="0">
+            <Grid Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="342"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0"
+                    Name="titleBar_left"
+                    MouseDown="titleBar_mouseDown" 
+                    Margin="0" 
+                    Grid.RowSpan="2" 
+                    Background="DarkRed"
+                />
+                <Grid Grid.Row="0"
+                    Grid.Column="1"
+                    Background="White"
+                    Name="Title_bar"
+                    MouseDown="titleBar_mouseDown"
+                    Margin="0"
+                >
+                    <Button Command="{x:Static SystemCommands.MaximizeWindowCommand}" 
+                            Content="1" 
+                            Width="20"
+                            Name="btn_maximizeRestore"
+                            HorizontalAlignment="Right"
+                            VerticalContentAlignment="Bottom"
+                            Margin="10,5,30,0"
+                            FontFamily="Webdings" 
+                            FontWeight="Light" 
+                            BorderBrush="White" 
+                            Background="White" 
+                            FontSize="13" 
+                            Foreground="#B2000000"/>
+                    <Button Command="{x:Static SystemCommands.MinimizeWindowCommand}" 
+                            Content="0"
+                            Width="20"
+                            HorizontalAlignment="Right"
+                            VerticalContentAlignment="Bottom"
+                            Margin="10,5,55,0"
+                            FontFamily="Webdings" 
+                            FontWeight="Light" 
+                            BorderBrush="White" 
+                            Background="White" 
+                            FontSize="13" 
+                            Foreground="#B2070707"/>
+                    <Button Content="r"
+                            Command="{x:Static SystemCommands.CloseWindowCommand}"
+                            HorizontalAlignment="Right"
+                            VerticalContentAlignment="Bottom"
+                            Margin="5,5,5,0" 
+                            Width="20" 
+                            FontFamily="Webdings" 
+                            FontWeight="Light" 
+                            BorderBrush="White" 
+                            Background="White" 
+                            FontSize="13" 
+                            Foreground="#B2000000" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0"
+                    Background="DarkRed"
+                    >
+                    <StackPanel>
+                    <Label Content="Clients"
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Top"
+                        Margin="14,0,0,0"
+                        FontSize="40" 
+                        Foreground="White"/>
+                    <Label Content="by notNull.cl" 
+                        HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Top" 
+                        FontSize="16"
+                        Padding="20,0,0,0"
+                        Foreground="WhiteSmoke"/>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1" 
+                      Grid.Column="1"
+                      Background="White"
+                      ClipToBounds="True"  
+                      Margin="0"
+                    >
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Name="ClientsLogo"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Left"
+                                   Source="clients_ico2.png" 
+                                   Stretch="None" 
+                            />
+                            <Label Content="Iniciar sesión"
+                                   VerticalAlignment="Top"
+                                   HorizontalAlignment="Left"
+                                   Foreground="Gray"
+                                   FontSize="35"
+                                   FontWeight="ExtraLight"
+                            />
+                        </StackPanel>
+                        <Label Content="Nombre de usuario"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Margin="80,0 ,0 ,0 "
+                               Foreground="Black"
+                               FontSize="12"
+                        ></Label>
+                        <TextBox Name="txt_username"
+                                 HorizontalAlignment="Left" 
+                                 Height="32" 
+                                 Margin="85,0,0,0" 
+                                 TextWrapping="Wrap" 
+                                 VerticalAlignment="Top" 
+                                 Width="300" 
+                                 FontSize="18" 
+                                 AutoWordSelection="True" 
+                                 TextOptions.TextFormattingMode="Display" 
+                                 ToolTip="Ingrese su nombre de usuario." 
+                                 BorderThickness="1"/>
+                        <Label Content="Password"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Margin="80,0,0,0"
+                               Foreground="Black"
+                               FontSize="12"
+                        ></Label>
+                        <PasswordBox Name="txt_password"
+                                     HorizontalAlignment="Left" 
+                                     Height="32" 
+                                     Margin="85,0,0,0" 
+                                     VerticalAlignment="Top" 
+                                     Width="300" 
+                                     TextOptions.TextFormattingMode="Display" 
+                                     FontSize="18" 
+                                     ToolTip="Ingrese su contraseña."
+                        />
+                        <Button Content="Iniciar Sesión" 
+                                HorizontalAlignment="Left" 
+                                Margin="85,20,1,0" 
+                                VerticalAlignment="Top" 
+                                Height="32" 
+                                Width="100" 
+                                BorderBrush="#FF2672EC" 
+                                Foreground="White" 
+                                FontWeight="SemiBold" 
+                                Background="#FF2672EC" 
+                                Click="Button_Click"
+                        />
+                    </StackPanel>
+                </Grid>
+            </Grid>
         </Grid>
-        <Grid Grid.Row="0"
-              Grid.Column="1"
-              Background="White"
-              Name="Title_bar"
-              MouseDown="titleBar_mouseDown"
-             >
-            <Button Command="{x:Static SystemCommands.MaximizeWindowCommand}" 
-                    Content="1" 
-                    Width="20"
-                    Name="btn_maximizeRestore"
-                    HorizontalAlignment="Right"
-                    VerticalContentAlignment="Bottom"
-                    Margin="10,5,30,0"
-                    FontFamily="Webdings" 
-                    FontWeight="Light" 
-                    BorderBrush="White" 
-                    Background="White" FontSize="13" Foreground="#B2000000"/>
-            <Button Command="{x:Static SystemCommands.MinimizeWindowCommand}" 
-                    Content="0"
-                    Width="20"
-                    HorizontalAlignment="Right"
-                    VerticalContentAlignment="Bottom"
-                    Margin="10,5,55,0"
-                    FontFamily="Webdings" 
-                    FontWeight="Light" 
-                    BorderBrush="White" 
-                    Background="White" FontSize="13" Foreground="#B2070707"/>
-
-            <Button Content="r"
-                    Command="{x:Static SystemCommands.CloseWindowCommand}"
-                    HorizontalAlignment="Right"
-                    VerticalContentAlignment="Bottom"
-                    Margin="5,5,5,0" 
-                    Width="20" 
-                    FontFamily="Webdings" 
-                    FontWeight="Light" 
-                    BorderBrush="White" 
-                    Background="White" FontSize="13" Foreground="#B2000000" />
-        </Grid>
-
-        <Grid Grid.Row="1"
-              Grid.Column="1"
-              Background="White"
-             >
-            <Image Name="ClientsLogo"
-                   VerticalAlignment="Top"
-                   HorizontalAlignment="Left"
-                   Source="clients_ico2.png" 
-                   Stretch="None" 
-                   />
-            <Label Content="Iniciar sesión"
-                   VerticalAlignment="Top"
-                   HorizontalAlignment="Left"
-                   Margin="80,50"
-                   Foreground="Gray"
-                   FontSize="35"
-                   FontWeight="ExtraLight"
-                ></Label>
-
-            <Label Content="Nombre de usuario"
-                   VerticalAlignment="Top"
-                   HorizontalAlignment="Left"
-                   Margin="80,120"
-                   Foreground="Black"
-                   FontSize="12"
-                ></Label>
-            <TextBox Name="txt_username"
-                     HorizontalAlignment="Left" 
-                     Height="32" 
-                     Margin="85,145,0,0" 
-                     TextWrapping="Wrap" 
-                     VerticalAlignment="Top" 
-                     Width="300" FontSize="18" AutoWordSelection="True" TextOptions.TextFormattingMode="Display" ToolTip="Ingrese su nombre de usuario." BorderThickness="1"/>
-            <Label Content="Password"
-                   VerticalAlignment="Top"
-                   HorizontalAlignment="Left"
-                   Margin="80,180"
-                   Foreground="Black"
-                   FontSize="12"
-                ></Label>
-            <PasswordBox Name="txt_password"
-                     HorizontalAlignment="Left" 
-                     Height="32" 
-                     Margin="85,205,0,0" 
-                     VerticalAlignment="Top" 
-                     Width="300" TextOptions.TextFormattingMode="Display" FontSize="18" ToolTip="Ingrese su contraseña."
-                     />
-            <Button Content="Iniciar Sesión" 
-                    HorizontalAlignment="Left" 
-                    Margin="85,255,1,0" 
-                    VerticalAlignment="Top" 
-                    Height="32" Width="100" 
-                    BorderBrush="#FF2672EC" Foreground="White" 
-                    FontWeight="SemiBold" Background="#FF2672EC" Click="Button_Click"
-                    
-                    />
-
-        </Grid>
-
-
-
-
+        <Rectangle Name="topLeft" Fill="DarkRed" Stroke="DarkRed" />
+        <Rectangle Name="top" Fill="DarkRed" Grid.Column="1" Stroke="DarkRed"/>
+        <Rectangle Name="topRight" Fill="DarkRed" Grid.Column="2" />
+        <Rectangle Name="right" Fill="DarkRed" Grid.Row="1" Grid.Column="2" />
+        <Rectangle Name="bottomRight" Fill="DarkRed" Grid.Row="2" Grid.Column="2" />
+        <Rectangle Name="bottom" Fill="DarkRed" Grid.Row="2" Grid.Column="1" />
+        <Rectangle Name="bottomLeft" Fill="DarkRed" Grid.Row="2" />
+        <Rectangle Name="left" Fill="DarkRed" Grid.Row="1" />
     </Grid>
 </Window>

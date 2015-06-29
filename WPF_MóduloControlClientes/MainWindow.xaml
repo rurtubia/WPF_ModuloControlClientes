@@ -15,6 +15,7 @@
         <CommandBinding Command="{x:Static SystemCommands.MaximizeWindowCommand}" CanExecute="CommandBinding_CanExecute_1" Executed="CommandBinding_MaximizeRestoreWindow" />
         <CommandBinding Command="{x:Static SystemCommands.MinimizeWindowCommand}" CanExecute="CommandBinding_CanExecute_1" Executed="CommandBinding_MinimizeWindow" />
     </Window.CommandBindings>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25" />
@@ -78,7 +79,7 @@
                             		Width="90" BorderBrush="White"
                                 >
                                     <StackPanel>
-                                        <Image Height="48" Width="48" Source="man_1-add.png" Stretch="Fill"/>
+                                        <Image Height="48" Width="48" Source="images/man_1-add.png" Stretch="Fill"/>
                                         <TextBlock HorizontalAlignment="Center"><Run Text="Nuevo"/></TextBlock>
                                     </StackPanel>
                                 </Button>
@@ -92,7 +93,7 @@
                             		Width="90" BorderBrush="White"
                                 >
                                     <StackPanel>
-                                        <Image Height="48" Width="48" Source="man_1-find.png" Stretch="Fill"/>
+                                        <Image Height="48" Width="48" Source="images/man_1-find.png" Stretch="Fill"/>
                                         <TextBlock HorizontalAlignment="Center"><Run Text="Buscar"/></TextBlock>
                                     </StackPanel>
                                 </Button>
@@ -105,7 +106,7 @@
                             		Width="90" BorderBrush="White"
                                 >
                                     <StackPanel>
-                                        <Image Height="48" Source="man_1-delete_d.png" Stretch="Fill" Width="48"/>
+                                        <Image Height="48" Source="images/man_1-delete_d.png" Stretch="Fill" Width="48"/>
                                         <TextBlock HorizontalAlignment="Center"><Run Text="Eliminar"/></TextBlock>
                                     </StackPanel>
                                 </Button>
@@ -118,7 +119,7 @@
                             		Width="90"
                                     >
                                     <StackPanel>
-                                        <Image Height="48" Source="man_1-edit_d.png" Stretch="Fill" Width="48"/>
+                                        <Image Height="48" Source="images/man_1-edit_d.png" Stretch="Fill" Width="48"/>
                                         <TextBlock HorizontalAlignment="Center"><Run Text="Editar"/></TextBlock>
                                     </StackPanel>
 
@@ -132,7 +133,7 @@
                                     BorderBrush="White"
                                 >
                                     <StackPanel>
-                                        <Image Height="48" Width="48" Source="man_1-save_d.png" Stretch="Fill"/>
+                                        <Image Height="48" Width="48" Source="images/man_1-save_d.png" Stretch="Fill"/>
                                         <TextBlock HorizontalAlignment="Center"><Run Text="Guardar"/></TextBlock>
                                     </StackPanel>
                                 </Button>
@@ -145,7 +146,7 @@
                                     BorderBrush="White"
                                 >
                                     <StackPanel>
-                                        <Image Height="48" Width="48" Source="man_1-arrow_left_d.png" Stretch="Fill"/>
+                                        <Image Height="48" Width="48" Source="images/man_1-arrow_left_d.png" Stretch="Fill"/>
                                         <TextBlock HorizontalAlignment="Center"><Run Text="Cancelar"/></TextBlock>
                                     </StackPanel>
                                 </Button>
@@ -174,7 +175,6 @@
                                                     <Button Content="Filtrar"></Button>
                                                 </Grid>
                                             </Grid>
-                                            
                                             <ListBox>
                                                 <ListBoxItem>Item 1</ListBoxItem>
                                                 <ListBoxItem>Item 2</ListBoxItem>
