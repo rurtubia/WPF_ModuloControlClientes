@@ -53,7 +53,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ISwitchable.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -115,19 +114,10 @@
     <Resource Include="newClient.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="addClient.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="removeClient.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="editClient.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="man_2-add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="man_1-remove.png" />
+    <Resource Include="man_1-delete.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="man_1-add.png" />
@@ -137,6 +127,27 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="man_1-find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="man_1-delete_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="man_1-edit_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="man_1-save_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="man_1-arrow_left_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="man_1-arrow_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="man_1-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
