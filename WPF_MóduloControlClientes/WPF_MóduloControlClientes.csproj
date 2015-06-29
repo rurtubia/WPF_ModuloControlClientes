@@ -95,15 +95,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="clients_ico3.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="clients_ico3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="clients_ico2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Page Include="LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -143,7 +134,15 @@
   <ItemGroup>
     <Resource Include="Images\man_1-save.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Icons\clients_t.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clients_logo_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clients_logo_96.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

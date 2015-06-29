@@ -9,7 +9,7 @@
         ResizeMode="CanResizeWithGrip"
         AllowsTransparency="True"
         MouseDown="Window_MouseDown"
-        Icon="clients_ico3.ico">
+        Icon="Icons/clients_t.ico">
     <Window.CommandBindings>
         <CommandBinding Command="{x:Static SystemCommands.CloseWindowCommand}" CanExecute="CommandBinding_CanExecute_1" Executed="CommandBinding_CloseWindow" />
         <CommandBinding Command="{x:Static SystemCommands.MaximizeWindowCommand}" CanExecute="CommandBinding_CanExecute_1" Executed="CommandBinding_MaximizeRestoreWindow" />

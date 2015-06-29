@@ -10,7 +10,7 @@
         AllowsTransparency="True"
         MouseDown="Window_MouseDown"
         FocusManager.FocusedElement="{Binding ElementName=txt_username}"
-        Icon="clients_ico3.ico"
+        Icon="Icons/clients_t.ico"
         MinHeight="350"
         MinWidth="750"
         >
@@ -37,7 +37,7 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="342"/>
+                    <ColumnDefinition Width="340"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Row="0" Grid.Column="0"
@@ -121,11 +121,12 @@
                             <Image Name="ClientsLogo"
                                    VerticalAlignment="Top"
                                    HorizontalAlignment="Left"
-                                   Source="clients_ico2.png" 
-                                   Stretch="None" 
+                                   Source="images/clients_logo_96.png" 
+                                   Stretch="None"
+
                             />
                             <Label Content="Iniciar sesión"
-                                   VerticalAlignment="Top"
+                                   VerticalAlignment="Center"
                                    HorizontalAlignment="Left"
                                    Foreground="Gray"
                                    FontSize="35"
