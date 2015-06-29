@@ -114,6 +114,30 @@
   <ItemGroup>
     <Resource Include="newClient.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="addClient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="removeClient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="editClient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="man_2-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="man_1-remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="man_1-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="man_1-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="man_1-find.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

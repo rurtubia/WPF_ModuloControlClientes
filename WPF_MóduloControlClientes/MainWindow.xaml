@@ -66,60 +66,83 @@
                             <RowDefinition Height="90"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>                           
+                        <Grid.ColumnDefinitions>
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Row="0">
-                          <StackPanel Orientation="Horizontal">
-                            <Button
-                                Background="White"
-                                HorizontalAlignment="Left" 
-                                VerticalAlignment="Stretch"
-                                Margin="0,0,0,0" 
-                                Width="90" BorderBrush="White"
+                            <StackPanel Orientation="Horizontal">
+
+
+                                <Button
+                            		Background="White"
+                            		HorizontalAlignment="Left" 
+                            		VerticalAlignment="Stretch"
+                            		Margin="0,0,0,0" 
+                            		Width="90" BorderBrush="White"
                                 >
                                     <StackPanel>
-                                        <Image Height="45" Width="45" HorizontalAlignment="Center" Margin="10,0,10,0" Source="newClient.png" Stretch="Fill"/>
-                                        <TextBlock HorizontalAlignment="Center">Nuevo</TextBlock>
+                                        <Image Height="48" Width="48" Source="man_1-find.png" Stretch="Fill"/>
+
+                                        <TextBlock HorizontalAlignment="Center"><Run Text="Buscar"/></TextBlock>
                                     </StackPanel>
                                 </Button>
-                                
+                                <Button
+                            		Background="White"
+                            		HorizontalAlignment="Left" 
+                            		VerticalAlignment="Stretch"
+                            		Margin="0,0,0,0" 
+                            		Width="90" BorderBrush="White"
+                                >
+                                    <StackPanel>
+                                        <Image Height="48" Width="48" Source="man_1-add.png" Stretch="Fill"/>
+
+                                        <TextBlock HorizontalAlignment="Center"><Run Text="Nuevo"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+
                                 <Button 
-                                Background="White"
-                                HorizontalAlignment="Left" 
-                                VerticalAlignment="Stretch"
-                                Margin="0,0,0,0" 
-                                Width="90" BorderBrush="White"
+                            		Background="White"
+                            		HorizontalAlignment="Left" 
+                            		VerticalAlignment="Stretch"
+                            		Margin="0,0,0,0" 
+                            		Width="90" BorderBrush="White"
                                 >
                                     <StackPanel>
-                                        <Image Height="45" Width="45" HorizontalAlignment="Center" Margin="10,0,10,0" Source="deleteClient.png" Stretch="Fill"/>
-                                        <TextBlock HorizontalAlignment="Center">Eliminar</TextBlock>
+                                        <Image Height="48" Source="man_1-remove.png" Stretch="Fill" Width="48"/>
+                                        <TextBlock HorizontalAlignment="Center"><Run Text="Eliminar"/></TextBlock>
                                     </StackPanel>
                                 </Button>
-                                <Button Content="Editar"
-                                Background="White"
-                                HorizontalAlignment="Left" 
-                                VerticalAlignment="Stretch"
-                                Margin="0,0,0,0" 
-                                Width="90"
-                                ></Button>
+                                <Button
+                            		Background="White"
+                            		BorderBrush="White"
+                            		HorizontalAlignment="Left" 
+                            		VerticalAlignment="Stretch"
+                            		Margin="0,0,0,0" 
+                            		Width="90"
+                                    >
+                                    <StackPanel>
+                                        <Image Height="48" Source="man_1-edit.png" Stretch="Fill" Width="48"/>
+                                        <TextBlock HorizontalAlignment="Center"><Run Text="Editar"/></TextBlock>
+                                    </StackPanel>
+
+                                </Button>
                                 <Button Content="Guardar"
-                                Background="White"
-                                HorizontalAlignment="Left" 
-                                VerticalAlignment="Stretch"
-                                Margin="0,0,0,0" 
-                                Width="90"
-                                ></Button>
+                            		Background="White"
+                            		HorizontalAlignment="Left" 
+                            		VerticalAlignment="Stretch"
+                            		Margin="0,0,0,0" 
+                            		Width="90"
+                                />
                                 <Button Content="Cancelar"
-                                Background="White"
-                                HorizontalAlignment="Left" 
-                                VerticalAlignment="Stretch"
-                                Margin="0,0,0,0" 
-                                Width="90"
-                                ></Button>
-                                
+                            		Background="White"
+                            		HorizontalAlignment="Left" 
+                            		VerticalAlignment="Stretch"
+                            		Margin="0,0,0,0" 
+                            		Width="90"
+                                />
+
                             </StackPanel>
                         </Grid>
-                        
+
                     </Grid>
                 </TabItem>
                 <TabItem Header="  PLANILLA  ">
