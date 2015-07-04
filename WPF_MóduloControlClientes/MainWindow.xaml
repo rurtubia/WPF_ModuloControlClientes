@@ -72,6 +72,7 @@
                         <Grid Grid.Row="0">
                             <StackPanel Orientation="Horizontal">
                                 <Button
+                                    Name="buttonNewClient"
                             		Background="White"
                             		HorizontalAlignment="Left" 
                             		VerticalAlignment="Stretch"
@@ -85,6 +86,7 @@
                                 </Button>
                                 <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
                                 <Button
+                                    Name="buttonSearchClient"
                                     IsDefault="True"
                             		Background="White"
                             		HorizontalAlignment="Left" 
@@ -99,6 +101,7 @@
                                 </Button>
                                 
                                 <Button 
+                                    Name="buttonDeleteClient"
                             		Background="White"
                             		HorizontalAlignment="Left" 
                             		VerticalAlignment="Stretch"
@@ -111,6 +114,7 @@
                                     </StackPanel>
                                 </Button>
                                 <Button
+                                    Name="buttonEditClient"
                             		Background="White"
                             		BorderBrush="White"
                             		HorizontalAlignment="Left" 
@@ -125,6 +129,7 @@
 
                                 </Button>
                                 <Button 
+                                    Name="buttonSaveContactEdition"
                             		Background="White"
                             		HorizontalAlignment="Left" 
                             		VerticalAlignment="Stretch"
@@ -138,6 +143,7 @@
                                     </StackPanel>
                                 </Button>
                                 <Button
+                                    Name="buttonCancelContactEdition"
                             		Background="White"
                             		HorizontalAlignment="Left" 
                             		VerticalAlignment="Stretch"
@@ -169,13 +175,19 @@
                                                     <ColumnDefinition Width="1*"/>
                                                 </Grid.ColumnDefinitions>
                                                 <Grid Grid.Column="0">
-                                                    <TextBox Margin="0, 0, 0, 0"></TextBox>
+                                                    <TextBox 
+                                                        Name="textboxSearchClient"
+                                                        Margin="0, 0, 0, 0"
+                                                             ></TextBox>
                                                 </Grid>
                                                 <Grid Grid.Column="1">
-                                                    <Button Content="Filtrar"></Button>
+                                                    <Button 
+                                                        Name="buttonFilterSearch"
+                                                        Content="Filtrar"></Button>
                                                 </Grid>
                                             </Grid>
-                                            <ListBox>
+                                            <ListBox
+                                                Name="listboxClients">
                                                 <ListBoxItem>Item 1</ListBoxItem>
                                                 <ListBoxItem>Item 2</ListBoxItem>
                                                 <ListBoxItem>Item 3</ListBoxItem>
@@ -213,7 +225,9 @@
                                                     <Label>Nombre</Label>
                                                 </Grid>
                                                 <Grid Grid.Column="1">
-                                                    <TextBox></TextBox>
+                                                    <TextBox
+                                                        Name="textboxNombre"
+                                                        ></TextBox>
                                                 </Grid>
                                             </Grid>
                                             <Grid Margin="5">
@@ -225,7 +239,8 @@
                                                     <Label>Apellido Paterno</Label>
                                                 </Grid>
                                                 <Grid Grid.Column="1">
-                                                    <TextBox></TextBox>
+                                                    <TextBox Name="textboxFirstSurname"
+                                                        ></TextBox>
                                                 </Grid>
                                             </Grid>
                                             <Grid Margin="5">
@@ -237,7 +252,8 @@
                                                     <Label>Apellido Materno</Label>
                                                 </Grid>
                                                 <Grid Grid.Column="1">
-                                                    <TextBox></TextBox>
+                                                    <TextBox Name="textboxSecondsurname"
+                                                             ></TextBox>
                                                 </Grid>
                                             </Grid>
                                             <Grid Margin="5">
@@ -249,7 +265,8 @@
                                                     <Label>Dirección</Label>
                                                 </Grid>
                                                 <Grid Grid.Column="1">
-                                                    <TextBox></TextBox>
+                                                    <TextBox Name="textboxAddress"
+                                                             ></TextBox>
                                                 </Grid>
                                             </Grid>
                                             <Grid Margin="5">
@@ -261,7 +278,9 @@
                                                     <Label>Comuna</Label>
                                                 </Grid>
                                                 <Grid Grid.Column="1">
-                                                    <TextBox></TextBox>
+                                                    <TextBox
+                                                        Name="textboxComuna"
+                                                        ></TextBox>
                                                 </Grid>
                                             </Grid>
                                             <Grid Margin="5">
@@ -273,7 +292,8 @@
                                                     <Label>Trabajo</Label>
                                                 </Grid>
                                                 <Grid Grid.Column="1">
-                                                    <TextBox></TextBox>
+                                                    <TextBox 
+                                                        Name="textboxWork"></TextBox>
                                                 </Grid>
                                             </Grid>
                                         </StackPanel> 

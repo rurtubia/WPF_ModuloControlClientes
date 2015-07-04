@@ -140,7 +140,7 @@
                                Foreground="Black"
                                FontSize="12"
                         ></Label>
-                        <TextBox Name="txt_username"
+                        <TextBox Name="textboxUsername"
                                  HorizontalAlignment="Left" 
                                  Height="32" 
                                  Margin="85,0,0,0" 
@@ -159,7 +159,7 @@
                                Foreground="Black"
                                FontSize="12"
                         ></Label>
-                        <PasswordBox Name="txt_password"
+                        <PasswordBox Name="textboxPassword"
                                      HorizontalAlignment="Left" 
                                      Height="32" 
                                      Margin="85,0,0,0" 
@@ -169,7 +169,8 @@
                                      FontSize="18" 
                                      ToolTip="Ingrese su contraseña."
                         />
-                        <Button Content="Iniciar Sesión" 
+                        <Button Name="buttonLogin"
+                                Content="Iniciar Sesión" 
                                 HorizontalAlignment="Left" 
                                 Margin="85,20,1,0" 
                                 VerticalAlignment="Top" 
