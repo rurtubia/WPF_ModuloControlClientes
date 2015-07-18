@@ -329,7 +329,7 @@
                                                     <ColumnDefinition Width="2*"/>
                                                 </Grid.ColumnDefinitions>
                                                 <Grid Grid.Column="0">
-                                                    <Label>Trabajo</Label>
+                                                    <Label Content="Profesión"/>
                                                 </Grid>
                                                 <Grid Grid.Column="1">
                                                     <TextBox 
