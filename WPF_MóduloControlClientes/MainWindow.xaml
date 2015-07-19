@@ -15,7 +15,7 @@
         <CommandBinding Command="{x:Static SystemCommands.MaximizeWindowCommand}" CanExecute="CommandBinding_CanExecute_1" Executed="CommandBinding_MaximizeRestoreWindow" />
         <CommandBinding Command="{x:Static SystemCommands.MinimizeWindowCommand}" CanExecute="CommandBinding_CanExecute_1" Executed="CommandBinding_MinimizeWindow" />
     </Window.CommandBindings>
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25" />
@@ -99,7 +99,7 @@
                                         <TextBlock HorizontalAlignment="Center"><Run Text="Buscar"/></TextBlock>
                                     </StackPanel>
                                 </Button>
-                                
+
                                 <Button 
                                     Name="buttonDeleteClient"
                             		Background="White"
@@ -161,11 +161,11 @@
                         <Separator VerticalAlignment="Bottom"/>
                         <Grid Grid.Row="1">
                             <StackPanel>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="5*"/>
                                         <ColumnDefinition Width="5*"/>
-                                </Grid.ColumnDefinitions>
+                                    </Grid.ColumnDefinitions>
                                     <Grid Grid.Column="0">
                                         <StackPanel Margin="20" Orientation="Vertical">
                                             <Label>Filtre los resultados de su búsqueda</Label>
@@ -208,7 +208,7 @@
                                                 </Grid.ColumnDefinitions>
                                                 <Grid Grid.Column="0">
                                                     <Label>Foto</Label>
-                                                </Grid>                                            
+                                                </Grid>
                                                 <Grid Grid.Column="1">
                                                     <Rectangle Height="120" 
                                                                Width="150" 
@@ -336,17 +336,218 @@
                                                         Name="textboxWork"></TextBox>
                                                 </Grid>
                                             </Grid>
-                                            
-                                            
-                                        </StackPanel> 
+
+
+                                        </StackPanel>
                                     </Grid>
-                            </Grid>
+                                </Grid>
                             </StackPanel>
                         </Grid>
                     </Grid>
                 </TabItem>
                 <TabItem Header="  PLANILLA  ">
-                    <Grid Background="White"/>
+                    <Grid Background="White" Margin="0,0,0.4,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="90"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <StackPanel Orientation="Horizontal">
+                                <Button
+                					x:Name="buttonNewClient1"
+                					Background="White"
+                					HorizontalAlignment="Left" 
+                					VerticalAlignment="Stretch"
+                					Margin="0,0,0,0" 
+                					Width="90" BorderBrush="White"
+                                >
+                                    <StackPanel>
+                                        <Image Height="48" Width="48" Source="Images/man_1-add.png" Stretch="Fill"/>
+                                        <TextBlock HorizontalAlignment="Center"><Run Text="Nuevo"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+                                <Button
+                					x:Name="buttonSearchClient1"
+                					IsDefault="True"
+                					Background="White"
+                					HorizontalAlignment="Left" 
+                					VerticalAlignment="Stretch"
+                					Margin="0,0,0,0" 
+                					Width="90" BorderBrush="White"
+                                >
+                                    <StackPanel>
+                                        <Image Height="48" Width="48" Source="Images/man_1-find.png" Stretch="Fill"/>
+                                        <TextBlock HorizontalAlignment="Center"><Run Text="Buscar"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+
+                                <Button 
+                					x:Name="buttonDeleteClient1"
+                					Background="White"
+                					HorizontalAlignment="Left" 
+                					VerticalAlignment="Stretch"
+                					Margin="0,0,0,0" 
+                					Width="90" BorderBrush="White"
+                                >
+                                    <StackPanel>
+                                        <Image Height="48" Source="Images/man_1-delete_d.png" Stretch="Fill" Width="48"/>
+                                        <TextBlock HorizontalAlignment="Center"><Run Text="Eliminar"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                                <Button
+                					x:Name="buttonEditClient1"
+                					Background="White"
+                					BorderBrush="White"
+                					HorizontalAlignment="Left" 
+                					VerticalAlignment="Stretch"
+                					Margin="0,0,0,0" 
+                					Width="90"
+                                    >
+                                    <StackPanel>
+                                        <Image Height="48" Source="Images/man_1-edit_d.png" Stretch="Fill" Width="48"/>
+                                        <TextBlock HorizontalAlignment="Center"><Run Text="Editar"/></TextBlock>
+                                    </StackPanel>
+
+                                </Button>
+                                <Button 
+                					x:Name="buttonSaveContactEdition1"
+                					Background="White"
+                					HorizontalAlignment="Left" 
+                					VerticalAlignment="Stretch"
+                					Margin="0,0,0,0" 
+                					Width="90"
+                					BorderBrush="White"
+                                >
+                                    <StackPanel>
+                                        <Image Height="48" Width="48" Source="Images/man_1-save_d.png" Stretch="Fill"/>
+                                        <TextBlock HorizontalAlignment="Center"><Run Text="Guardar"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                                <Button
+                					x:Name="buttonCancelContactEdition1"
+                					Background="White"
+                					HorizontalAlignment="Left" 
+                					VerticalAlignment="Stretch"
+                					Margin="0,0,0,0" 
+                					Width="90"
+                					BorderBrush="White"
+                                >
+                                    <StackPanel>
+                                        <Image Height="48" Width="48" Source="Images/man_1-arrow_left_d.png" Stretch="Fill"/>
+                                        <TextBlock HorizontalAlignment="Center"><Run Text="Cancelar"/></TextBlock>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </Grid>
+                        <Separator VerticalAlignment="Bottom"/>
+                        <Grid Grid.Row="1">
+                            <StackPanel>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="5*"/>
+                                        <ColumnDefinition Width="5*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                                        <StackPanel Margin="20" Orientation="Vertical">
+                                            <Grid Margin="0,0,0,20" Height="30">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="3*"/>
+                                                    <ColumnDefinition Width="1*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0"/>
+                                                <Grid Grid.Column="1"/>
+                                            </Grid>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <StackPanel Margin="20, 20 , 60, 20">
+                                            <Grid Margin="5">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="1*"/>
+                                                    <ColumnDefinition Width="2*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0"/>
+                                                <Grid Grid.Column="1"/>
+                                            </Grid>
+                                            <Grid Margin="5">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="1*"/>
+                                                    <ColumnDefinition Width="2*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0"/>
+                                                <Grid Grid.Column="1"/>
+                                            </Grid>
+                                            <Grid Margin="5">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="1*"/>
+                                                    <ColumnDefinition Width="2*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0"/>
+                                                <Grid Grid.Column="1"/>
+                                            </Grid>
+                                            <Grid Margin="5">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="1*"/>
+                                                    <ColumnDefinition Width="2*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0"/>
+                                                <Grid Grid.Column="1"/>
+                                            </Grid>
+
+                                            <Grid Margin="5">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="1*"/>
+                                                    <ColumnDefinition Width="2*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0"/>
+                                                <Grid Grid.Column="2"/>
+                                            </Grid>
+                                            <Grid Margin="5">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="1*"/>
+                                                    <ColumnDefinition Width="1*"/>
+                                                    <ColumnDefinition Width="1*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0"/>
+                                                <Grid Grid.Column="1"/>
+                                                <Grid Grid.Column="2"/>
+                                            </Grid>
+
+
+                                            <Grid Margin="5">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="1*"/>
+                                                    <ColumnDefinition Width="2*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0"/>
+                                                <Grid Grid.Column="1"/>
+                                            </Grid>
+                                            <Grid Margin="5">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="1*"/>
+                                                    <ColumnDefinition Width="2*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0"/>
+                                                <Grid Grid.Column="1"/>
+                                            </Grid>
+                                            <Grid Margin="5">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="1*"/>
+                                                    <ColumnDefinition Width="2*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0"/>
+                                                <Grid Grid.Column="1"/>
+                                            </Grid>
+
+
+                                        </StackPanel>
+                                    </Grid>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                        <DataGrid HorizontalAlignment="Left" Margin="10,10.4,0,0" Grid.Row="1" VerticalAlignment="Top" Height="438" Width="774"/>
+                    </Grid>
                 </TabItem>
             </TabControl>
         </Grid>
