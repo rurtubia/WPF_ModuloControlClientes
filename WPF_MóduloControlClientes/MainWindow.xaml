@@ -359,7 +359,7 @@
                 					HorizontalAlignment="Left" 
                 					VerticalAlignment="Stretch"
                 					Margin="0,0,0,0" 
-                					Width="90" BorderBrush="White"
+                					Width="90" BorderBrush="White" Click="buttonNewClient1_Click"
                                 >
                                     <StackPanel>
                                         <Image Height="48" Width="48" Source="Images/man_1-add.png" Stretch="Fill"/>

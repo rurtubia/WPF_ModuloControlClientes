@@ -73,5 +73,10 @@ namespace WPF_MóduloControlClientes
             if (e.ChangedButton == MouseButton.Left)
                 DragMove();
         }
+
+        private void buttonNewClient1_Click(object sender, RoutedEventArgs e)
+        {
+            .
+        }
     }
 }
