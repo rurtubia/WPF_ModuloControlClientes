@@ -76,7 +76,7 @@ namespace WPF_MóduloControlClientes
 
         private void buttonNewClient1_Click(object sender, RoutedEventArgs e)
         {
-            .
+           
         }
     }
 }
